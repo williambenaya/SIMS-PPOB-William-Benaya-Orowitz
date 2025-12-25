@@ -1,0 +1,199 @@
+/* Container Utama */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 50px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 30px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* --- Hero Section (Profile & Balance) --- */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Agar responsif di HP */
+  gap: 20px;
+}
+
+/* Kiri: Profile */
+.profile-box {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.greeting {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.user-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Kanan: Balance Card (Merah) */
+.balance-card {
+  flex: 1.5; /* Lebih lebar sedikit dari profile */
+  background: linear-gradient(90deg, #f42619 0%, #dd2015 100%); /* Warna Merah */
+  color: white;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(244, 38, 25, 0.2);
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.balance-label {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.balance-amount {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.toggle-balance {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* --- Services Grid (Icon Menu) --- */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Auto kolom */
+  gap: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon-box {
+  width: 60px;
+  height: 60px;
+  /* background: #f0f0f0;  Opsional jika ingin background kotak */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.service-icon-box img {
+  width: 100%; /* Sesuaikan ikon dari API */
+  height: auto;
+}
+
+.service-label {
+  font-size: 12px;
+  color: #333;
+}
+
+/* --- Banner Slider --- */
+.banner-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.banner-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Agar bisa discroll horizontal */
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  /* Menyembunyikan scrollbar default agar rapi */
+  scrollbar-width: none; 
+}
+
+.banner-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-img {
+  width: 280px; /* Ukuran banner */
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0; /* Agar gambar tidak mengecil */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.banner-img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsiveness untuk HP */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .navbar {
+    flex-direction: row; /* Tetap baris */
+  }
+
+  .nav-links {
+    display: none; /* Sembunyikan link di HP, ganti hamburger menu nanti */
+  }
+}

@@ -1,0 +1,171 @@
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.login-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 450px; 
+  text-align: center;
+}
+
+
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logo-img {
+  width: 25px; 
+  height: auto;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  color: #000;
+}
+
+
+.input-field-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0; /* Border abu-abu tipis */
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.input-field-container.border-error {
+  border-color: #f42619;
+}
+
+.custom-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0 10px;
+  color: #333;
+}
+
+.custom-input::placeholder {
+  color: #bfbfbf;
+}
+
+
+.eye-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #bfbfbf;
+}
+
+
+.btn-login {
+  width: 100%;
+  background-color: #f42619; 
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-login:hover {
+  background-color: #d31f15;
+}
+
+
+.register-text {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+.red-link {
+  color: #f42619;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Container Alert */
+.alert-message {
+  background-color: #fff1f0; 
+  color: #f42619;
+  padding: 12px 16px;
+  border-radius: 5px;
+  margin-top: 25px;        
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Tombol Close (x) */
+.close-icon {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: #f42619;
+  opacity: 0.8;
+}
+
+.close-icon:hover {
+  opacity: 1;
+}
+
+.alert-success {
+  background-color: #f0fff4;
+  color: #2f855a;
+  border: 1px solid #2f855a;
+}
+.login-right {
+  flex: 1;
+  background-color: #fff1f0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-fluid {
+  max-width: 80%;
+  height: auto;
+}
+
+
+@media (max-width: 992px) {
+  .login-right {
+    display: none;
+  }
+}
