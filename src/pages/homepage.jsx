@@ -3,6 +3,8 @@ import axios from "axios";
 import "../styles/Home.css"; 
 import { Eye, EyeOff } from "lucide-react"; 
 import { useNavigate } from "react-router-dom";
+import logo from '../assets/Logo.png'; 
+import ProfilePhoto from '../assets/Profile Photo.png';
 const Home = () => {
   // State Data API
   const [profile, setProfile] = useState({});
@@ -55,7 +57,7 @@ const navigate = useNavigate();
       <nav className="navbar">
         <div className="nav-logo">
     
-          <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="Logo" width={24} />
+          <img src={logo} alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">
@@ -74,14 +76,14 @@ const navigate = useNavigate();
             src={
               profile.profile_image && profile.profile_image.includes("https") 
                 ? profile.profile_image 
-                : "{process.env.PUBLIC_URL + '/Profile Photo.png'}" 
+                : {ProfilePhoto} 
             } 
             alt="Profile" 
             className="profile-img" 
             onError={(e) => {
             
               e.target.onerror = null; 
-              e.target.src = "{process.env.PUBLIC_URL + '/Profile Photo.png'}"; 
+              e.target.src = {ProfilePhoto} ; 
             }}
           />
           <div className="profile-text">

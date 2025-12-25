@@ -3,6 +3,7 @@ import axios from "axios";
 import { Pencil, User, AtSign } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Profile.css";
+import logo from '../assets/Logo.png'; 
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -89,7 +90,7 @@ const Profile = () => {
     <div className="home-container">
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="Logo" width={24} />
+          <img src={logo} alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">
@@ -111,7 +112,7 @@ const Profile = () => {
               ref={fileInputRef} 
               onChange={handleImageUpload} 
               style={{ display: "none" }} 
-              accept="{process.env.PUBLIC_URL + '/*'}"
+              accept="image/*"
             />
           </div>
           <h2 className="profile-name">{profile.first_name} {profile.last_name}</h2>

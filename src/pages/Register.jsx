@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AtSign, User, Lock, Eye, EyeOff } from "lucide-react"; 
 import "../styles/registrasi.css"; 
+import logo from '../assets/Logo.png'; 
+import illustration from '../assets/Illustrasi Login.png';
 const Registration = () => {
   const navigate = useNavigate();
 
@@ -84,7 +86,7 @@ const Registration = () => {
         <div className="login-box">
         
           <div className="logo-header">
-            <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="Logo" style={{ width: 24 }} />
+            <img src={logo} alt="Logo" style={{ width: 24 }} />
             <span className="logo-text">SIMS PPOB</span>
           </div>
 
@@ -220,7 +222,7 @@ const Registration = () => {
 
 
       <div className="login-right">
-        <img src="{process.env.PUBLIC_URL + '/Illustrasi Login.png}" alt="Ilustrasi" className="hero-image" />
+        <img src={illustration}alt="Ilustrasi" className="hero-image" />
       </div>
     </div>
   );

@@ -4,7 +4,8 @@ import axios from "axios";
 import { Banknote } from "lucide-react";
 import "../styles/Home.css";
 import "../styles/Payment.css";
-
+import logo from '../assets/Logo.png'; 
+import ProfilePhoto from '../assets/Profile Photo.png';
 const Payment = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -61,7 +62,7 @@ const Payment = () => {
       {/* --- NAVBAR --- */}
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="Logo" width={24} />
+          <img src={logo} alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">
@@ -74,7 +75,7 @@ const Payment = () => {
       {/* --- HERO SECTION --- */}
       <div className="hero-section">
         <div className="profile-box">
-          <img src="{process.env.PUBLIC_URL + '/Profile Photo.png'}" alt="Profile" className="profile-img" />
+          <img src={ProfilePhoto} alt="Profile" className="profile-img" />
           <div className="profile-text">
             <p className="greeting">Selamat datang,</p>
             <h2 className="user-name">{profile.first_name} {profile.last_name}</h2>
@@ -120,7 +121,7 @@ const Payment = () => {
             {modalType === "confirm" && (
               <>
                 <div className="modal-icon logo-bg">
-                  <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="logo" width={40} />
+                  <img src={logo} alt="logo" width={40} />
                 </div>
                 <p>Beli {selectedService?.service_name} senilai</p>
                 <h2 className="modal-amount">Rp{selectedService?.service_tariff.toLocaleString("id-ID")} ?</h2>

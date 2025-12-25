@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/Home.css";
 import "../styles/Transaction.css";
+import logo from '../assets/Logo.png'; 
 
 const Transaction = () => {
  const [profile, setProfile] = useState({}); 
@@ -71,7 +72,7 @@ const Transaction = () => {
       {/* --- NAVBAR --- */}
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="Logo" width={24} />
+          <img src={logo} alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">

@@ -5,6 +5,8 @@ import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import logo from '../assets/Logo.png'; 
+import illustration from '../assets/Illustrasi Login.png';
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -54,7 +56,7 @@ const navigate = useNavigate();
       <div className="login-left">
         <div className="login-box">
           <div className="logo-header">
-           <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="logo" />
+           <img src={logo} alt="logo" />
             <span className="logo-text">SIMS PPOB</span>
           </div>
 
@@ -113,7 +115,7 @@ const navigate = useNavigate();
       {/* RIGHT */}
       <div className="login-right">
                     <img
-                src="{process.env.PUBLIC_URL + '/Illustrasi Login.png}"
+                src={illustration}
                 alt="illustration"
                 className="login-img"
             />
