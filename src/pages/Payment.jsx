@@ -61,7 +61,7 @@ const Payment = () => {
       {/* --- NAVBAR --- */}
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="/image/Logo.png" alt="Logo" width={24} />
+          <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">
@@ -74,7 +74,7 @@ const Payment = () => {
       {/* --- HERO SECTION --- */}
       <div className="hero-section">
         <div className="profile-box">
-          <img src="/image/Profile Photo.png" alt="Profile" className="profile-img" />
+          <img src="{process.env.PUBLIC_URL + '/Profile Photo.png'}" alt="Profile" className="profile-img" />
           <div className="profile-text">
             <p className="greeting">Selamat datang,</p>
             <h2 className="user-name">{profile.first_name} {profile.last_name}</h2>
@@ -114,14 +114,13 @@ const Payment = () => {
         </button>
       </div>
 
-      {/* --- LOGIKA MODAL --- */}
       {modalType && (
         <div className="modal-overlay">
           <div className="modal-box">
             {modalType === "confirm" && (
               <>
                 <div className="modal-icon logo-bg">
-                  <img src="/image/Logo.png" alt="logo" width={40} />
+                  <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="logo" width={40} />
                 </div>
                 <p>Beli {selectedService?.service_name} senilai</p>
                 <h2 className="modal-amount">Rp{selectedService?.service_tariff.toLocaleString("id-ID")} ?</h2>

@@ -84,7 +84,7 @@ const Registration = () => {
         <div className="login-box">
         
           <div className="logo-header">
-            <img src="/image/logo.png" alt="Logo" style={{ width: 24 }} />
+            <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="Logo" style={{ width: 24 }} />
             <span className="logo-text">SIMS PPOB</span>
           </div>
 
@@ -220,7 +220,7 @@ const Registration = () => {
 
 
       <div className="login-right">
-        <img src="/image/Illustrasi Login.png" alt="Ilustrasi" className="hero-image" />
+        <img src="{process.env.PUBLIC_URL + '/Illustrasi Login.png}" alt="Ilustrasi" className="hero-image" />
       </div>
     </div>
   );

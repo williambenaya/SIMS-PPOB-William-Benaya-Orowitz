@@ -12,7 +12,7 @@ const Home = () => {
 const navigate = useNavigate();
   // State UI
   const [showBalance, setShowBalance] = useState(false);
-  const [loading, setLoading] = useState(true);
+ const [, setLoading] = useState(true);
 
   useEffect(() => {
     fetchData();
@@ -55,7 +55,7 @@ const navigate = useNavigate();
       <nav className="navbar">
         <div className="nav-logo">
     
-          <img src="/image/Logo.png" alt="Logo" width={24} />
+          <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">
@@ -74,14 +74,14 @@ const navigate = useNavigate();
             src={
               profile.profile_image && profile.profile_image.includes("https") 
                 ? profile.profile_image 
-                : "/image/Profile Photo.png" 
+                : "{process.env.PUBLIC_URL + '/Profile Photo.png'}" 
             } 
             alt="Profile" 
             className="profile-img" 
             onError={(e) => {
             
               e.target.onerror = null; 
-              e.target.src = "/image/Profile Photo.png"; 
+              e.target.src = "{process.env.PUBLIC_URL + '/Profile Photo.png'}"; 
             }}
           />
           <div className="profile-text">
@@ -111,7 +111,7 @@ const navigate = useNavigate();
           <div 
                     key={index} 
                     className="service-item"
-                    onClick={() => navigate("/payment", { state: { service: service } })} // Kirim data service ke page payment
+                    onClick={() => navigate("/payment", { state: { service: service } })}
                     >
                     <div className="service-icon-box">
                         <img src={service.service_icon} alt={service.service_name} />

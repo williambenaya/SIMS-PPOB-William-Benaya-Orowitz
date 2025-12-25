@@ -89,7 +89,7 @@ const Profile = () => {
     <div className="home-container">
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="/image/Logo.png" alt="Logo" width={24} />
+          <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">
@@ -111,7 +111,7 @@ const Profile = () => {
               ref={fileInputRef} 
               onChange={handleImageUpload} 
               style={{ display: "none" }} 
-              accept="image/*"
+              accept="{process.env.PUBLIC_URL + '/*'}"
             />
           </div>
           <h2 className="profile-name">{profile.first_name} {profile.last_name}</h2>
