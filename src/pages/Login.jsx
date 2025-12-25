@@ -54,7 +54,7 @@ const navigate = useNavigate();
       <div className="login-left">
         <div className="login-box">
           <div className="logo-header">
-           <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="logo" />
+           <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="logo" />
             <span className="logo-text">SIMS PPOB</span>
           </div>
 

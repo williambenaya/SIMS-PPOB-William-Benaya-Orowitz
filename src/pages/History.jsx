@@ -71,7 +71,7 @@ const Transaction = () => {
       {/* --- NAVBAR --- */}
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="Logo" width={24} />
+          <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">

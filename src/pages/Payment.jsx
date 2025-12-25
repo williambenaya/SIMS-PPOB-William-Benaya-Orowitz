@@ -61,7 +61,7 @@ const Payment = () => {
       {/* --- NAVBAR --- */}
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="Logo" width={24} />
+          <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">
@@ -120,7 +120,7 @@ const Payment = () => {
             {modalType === "confirm" && (
               <>
                 <div className="modal-icon logo-bg">
-                  <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="logo" width={40} />
+                  <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="logo" width={40} />
                 </div>
                 <p>Beli {selectedService?.service_name} senilai</p>
                 <h2 className="modal-amount">Rp{selectedService?.service_tariff.toLocaleString("id-ID")} ?</h2>

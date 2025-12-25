@@ -67,7 +67,7 @@ const TopUp = () => {
       {/* --- NAVBAR --- */}
       <nav className="navbar">
         <div className="nav-logo">
-          <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="Logo" width={24} />
+          <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="Logo" width={24} />
           <span>SIMS PPOB</span>
         </div>
         <div className="nav-links">
@@ -144,7 +144,7 @@ const TopUp = () => {
             {modalType === "confirm" && (
               <>
                 <div className="modal-icon logo-bg">
-                  <img src="{process.env.PUBLIC_URL + '/logo.png'}" alt="logo" width={40} />
+                  <img src="{process.env.PUBLIC_URL + '/Logo.png'}" alt="logo" width={40} />
                 </div>
                 <p>Anda yakin untuk Top Up sebesar</p>
                 <h2 className="modal-amount">Rp{parseInt(amount).toLocaleString("id-ID")} ?</h2>
