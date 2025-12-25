@@ -3,6 +3,7 @@ import axios from "axios";
 import "../styles/Home.css";
 import "../styles/Transaction.css";
 import logo from '../assets/Logo.png'; 
+import ProfilePhoto from '../assets/Profile Photo.png';
 
 const Transaction = () => {
  const [profile, setProfile] = useState({}); 
@@ -85,7 +86,7 @@ const Transaction = () => {
       {/* --- HERO SECTION --- */}
       <div className="hero-section">
         <div className="profile-box">
-          <img src="{process.env.PUBLIC_URL + '/Profile Photo.png'}" alt="Profile" className="profile-img" />
+          <img src={ProfilePhoto}  alt="Profile" className="profile-img" />
           <div className="profile-text">
             <p className="greeting">Selamat datang,</p>
             <h2 className="user-name">{profile.first_name} {profile.last_name}</h2>
