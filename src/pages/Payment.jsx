@@ -24,7 +24,7 @@ const Payment = () => {
       return;
     }
     fetchUserData();
-  }, [selectedService]);
+}, [navigate, selectedService]);
 
   const fetchUserData = async () => {
     const token = localStorage.getItem("token");
