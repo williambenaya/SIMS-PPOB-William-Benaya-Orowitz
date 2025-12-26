@@ -15,8 +15,7 @@ const Home = () => {
 const navigate = useNavigate();
   // State UI
   const [showBalance, setShowBalance] = useState(false);
- const [, setLoading] = useState(true);
-
+const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     fetchData();
   }, []);
@@ -37,12 +36,22 @@ const navigate = useNavigate();
       setBalance(resBalance.data.data.balance);
       setServices(resServices.data.data);
       setBanners(resBanner.data.data);
-      setLoading(false);
+     
     } catch (error) {
       console.error("Error fetching data", error);
     
     }
   };
+
+ useEffect(() => {
+    
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 100); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   const formatRupiah = (number) => {
     return new Intl.NumberFormat("id-ID", {
