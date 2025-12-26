@@ -84,7 +84,7 @@ const Profile = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token"); 
-    navigate("/login"); 
+    navigate("/"); 
   };
 
   return (
@@ -115,7 +115,7 @@ const Profile = () => {
               ref={fileInputRef} 
               onChange={handleImageUpload} 
               style={{ display: "none" }} 
-              accept="image/*"
+              accept="assets/*"
             />
           </div>
           <h2 className="profile-name">{profile.first_name} {profile.last_name}</h2>
