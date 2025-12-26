@@ -6,6 +6,7 @@ import "../styles/Home.css";
 import "../styles/Payment.css";
 import logo from '../assets/Logo.png'; 
 import ProfilePhoto from '../assets/Profile Photo.png';
+import { Link } from 'react-router-dom';
 const Payment = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -63,7 +64,9 @@ const Payment = () => {
       <nav className="navbar">
         <div className="nav-logo">
           <img src={logo} alt="Logo" width={24} />
-          <span>SIMS PPOB</span>
+        <Link to="/homepage" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}>
+  SIMS PPOB
+</Link>
         </div>
         <div className="nav-links">
           <a href="/topup">Top Up</a>

@@ -4,7 +4,7 @@ import { Pencil, User, AtSign } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Profile.css";
 import logo from '../assets/Logo.png'; 
-
+import { Link } from 'react-router-dom';
 const Profile = () => {
   const navigate = useNavigate();
   const fileInputRef = useRef(null);
@@ -43,7 +43,7 @@ const Profile = () => {
     }
   };
 
-  // Fungsi Update Foto Profil
+
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -91,7 +91,9 @@ const Profile = () => {
       <nav className="navbar">
         <div className="nav-logo">
           <img src={logo} alt="Logo" width={24} />
-          <span>SIMS PPOB</span>
+      <Link to="/homepage" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }}>
+  SIMS PPOB
+</Link>
         </div>
         <div className="nav-links">
           <a href="/topup">Top Up</a>
