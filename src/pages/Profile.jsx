@@ -4,6 +4,7 @@ import { Pencil, User, AtSign } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Profile.css";
 import logo from '../assets/Logo.png'; 
+import ProfilePhoto from '../assets/Profile Photo.png';
 import { Link } from 'react-router-dom';
 const Profile = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Profile = () => {
     email: "",
     first_name: "",
     last_name: "",
-    profile_pic: "/image/Profile Photo.png" 
+    profile_pic: {ProfilePhoto} ,
   });
 
   const [isEditing, setIsEditing] = useState(false);
